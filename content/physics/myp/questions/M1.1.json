@@ -1,0 +1,27 @@
+[
+  {
+    "id": "phys-myp-M11-001",
+    "paper": "A",
+    "subtopics": ["M1.1"],
+    "stem": "A cyclist travels $3.6\\text{ km}$ in $12$ minutes.",
+    "parts": [
+      {
+        "label": "a", "marks": 2,
+        "text": "Calculate the cyclist's average speed in $\\text{m s}^{-1}$.",
+        "answer": { "value": 5.0, "unit": "m s^{-1}" },
+        "markscheme": ["Converts units: 3600 m and 720 s", "speed = 3600 / 720 = 5.0 m/s"]
+      }
+    ],
+    "source": "IBCommons original"
+  },
+  {
+    "id": "phys-myp-M11-002",
+    "paper": "A",
+    "subtopics": ["M1.1"],
+    "stem": "Which of these quantities is a vector?",
+    "options": ["Speed", "Distance", "Velocity", "Time"],
+    "answer": "C",
+    "markscheme": ["Velocity has both size and direction, so it is a vector."],
+    "source": "IBCommons original"
+  }
+]

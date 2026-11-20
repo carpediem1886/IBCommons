@@ -1,0 +1,131 @@
+{
+ "code": "A.2",
+ "title": "Forces and momentum",
+ "minutes": 25,
+ "intro": "Forces explain **why** things move the way they do. In this lesson you'll build up from what a force is to one of the most useful ideas in physics: conservation of momentum.",
+ "objectives": [
+  "Represent forces as vectors and draw free-body diagrams",
+  "Use Newton's three laws of motion",
+  "Calculate momentum $p = mv$ and impulse $J = F\\Delta t$",
+  "Apply conservation of momentum to collisions and explosions"
+ ],
+ "steps": [
+  {
+   "title": "Forces are vectors",
+   "body": "A force is a push or a pull. It has a size (measured in newtons, N) **and** a direction, so it is a vector.\n\nTo work out what an object will do, we draw a **free-body diagram**: the object on its own, with an arrow for every force acting *on* it. Each arrow starts on the object and its length shows the size of the force.",
+   "figure": {
+    "svg": "<svg viewBox=\"0 0 420 260\" width=\"420\" role=\"img\" aria-label=\"Free-body diagram of a box pulled along a table\"><defs><marker id=\"ah13233A\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#13233A\"/></marker><marker id=\"ah0E9F8E\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#0E9F8E\"/></marker><marker id=\"ahF2994A\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#F2994A\"/></marker><marker id=\"ah5B6575\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#5B6575\"/></marker></defs><line x1=\"40\" y1=\"190\" x2=\"380\" y2=\"190\" stroke=\"#5B6575\" stroke-width=\"2\"/><rect x=\"160\" y=\"120\" width=\"100\" height=\"70\" rx=\"10\" fill=\"#13233A\"/><line x1=\"210\" y1=\"155\" x2=\"210\" y2=\"245\" stroke=\"#13233A\" stroke-width=\"4\" marker-end=\"url(#ah13233A)\"/><text x=\"232\" y=\"240\" fill=\"#13233A\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"start\">Weight W</text><line x1=\"210\" y1=\"155\" x2=\"210\" y2=\"62\" stroke=\"#0E9F8E\" stroke-width=\"4\" marker-end=\"url(#ah0E9F8E)\"/><text x=\"232\" y=\"72\" fill=\"#0E9F8E\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"start\">Normal force N</text><line x1=\"260\" y1=\"155\" x2=\"355\" y2=\"155\" stroke=\"#F2994A\" stroke-width=\"4\" marker-end=\"url(#ahF2994A)\"/><text x=\"352\" y=\"140\" fill=\"#F2994A\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"end\">Pull P</text><line x1=\"160\" y1=\"155\" x2=\"72\" y2=\"155\" stroke=\"#5B6575\" stroke-width=\"4\" marker-end=\"url(#ah5B6575)\"/><text x=\"76\" y=\"140\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"start\">Friction F</text></svg>",
+    "caption": "A box pulled along a table. Four forces act on it."
+   },
+   "key": "Only draw forces acting **on** the object, never forces the object exerts on other things.",
+   "check": {
+    "question": "In the diagram, which pair of forces cancels if the box does not lift off or sink into the table?",
+    "options": [
+     "Pull and friction",
+     "Weight and normal force",
+     "Pull and weight",
+     "Friction and normal force"
+    ],
+    "answer": "B",
+    "explain": "Vertically nothing accelerates, so the normal force balances the weight."
+   }
+  },
+  {
+   "title": "Newton's first law",
+   "body": "An object stays at rest, or keeps moving at **constant velocity**, unless a resultant (unbalanced) force acts on it.\n\nThis means a force is not needed to *keep* something moving; a force is needed to *change* its motion. The tendency of an object to resist changes in its motion is called **inertia**.",
+   "key": "Resultant force = 0  ⇔  constant velocity (which includes being at rest).",
+   "check": {
+    "question": "A space probe far from any planet switches off its engines. What happens to its motion?",
+    "options": [
+     "It slows down and stops",
+     "It keeps moving at constant velocity",
+     "It speeds up",
+     "It starts to move in a circle"
+    ],
+    "answer": "B",
+    "explain": "With no resultant force there is no acceleration, so its velocity stays the same."
+   }
+  },
+  {
+   "title": "Newton's second law",
+   "body": "When a resultant force acts, the object accelerates in the direction of the force. For a constant mass:",
+   "formula": "$$F = ma$$",
+   "example": "A $1500\\text{ kg}$ car accelerates at $2.0\\text{ m s}^{-2}$. The resultant force is $F = 1500 \\times 2.0 = 3000\\text{ N}$.\n\nThe more general form is $F = \\dfrac{\\Delta p}{\\Delta t}$: force is the rate of change of momentum. You'll use this in step 5.",
+   "check": {
+    "question": "The same resultant force acts on two trolleys. Trolley Y has twice the mass of trolley X. How does the acceleration of Y compare with X?",
+    "options": [
+     "Twice as large",
+     "The same",
+     "Half as large",
+     "A quarter as large"
+    ],
+    "answer": "C",
+    "explain": "$a = F/m$, so doubling the mass halves the acceleration."
+   }
+  },
+  {
+   "title": "Newton's third law",
+   "body": "When body A exerts a force on body B, body B exerts a force on body A that is **equal in size, opposite in direction and of the same type**.\n\nThe two forces in a pair always act on **different** bodies, so they never cancel each other out.",
+   "figure": {
+    "svg": "<svg viewBox=\"0 0 440 210\" width=\"440\" role=\"img\" aria-label=\"Two skaters push each other apart\"><defs><marker id=\"ah0E9F8E\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#0E9F8E\"/></marker><marker id=\"ahF2994A\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#F2994A\"/></marker></defs><circle cx=\"100\" cy=\"60\" r=\"18\" fill=\"#13233A\"/><rect x=\"82\" y=\"82\" width=\"36\" height=\"72\" rx=\"12\" fill=\"#13233A\"/><circle cx=\"340\" cy=\"60\" r=\"18\" fill=\"#5B6575\"/><rect x=\"322\" y=\"82\" width=\"36\" height=\"72\" rx=\"12\" fill=\"#5B6575\"/><line x1=\"135\" y1=\"100\" x2=\"310\" y2=\"100\" stroke=\"#0E9F8E\" stroke-width=\"4\" marker-end=\"url(#ah0E9F8E)\"/><line x1=\"305\" y1=\"140\" x2=\"130\" y2=\"140\" stroke=\"#F2994A\" stroke-width=\"4\" marker-end=\"url(#ahF2994A)\"/><text x=\"220\" y=\"90\" fill=\"#0E9F8E\" font-family=\"Inter, sans-serif\" font-size=\"14\" text-anchor=\"middle\">force of A on B</text><text x=\"220\" y=\"130\" fill=\"#F2994A\" font-family=\"Inter, sans-serif\" font-size=\"14\" text-anchor=\"middle\">force of B on A</text><text x=\"100\" y=\"180\" fill=\"#13233A\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">Skater A</text><text x=\"340\" y=\"180\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">Skater B</text><text x=\"220\" y=\"200\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"12\" text-anchor=\"middle\">equal size · opposite direction · act on different bodies</text></svg>",
+    "caption": "Two skaters push off each other. Both move apart."
+   },
+   "check": {
+    "question": "A book rests on a table. Which force forms a Newton's third law pair with the Earth's gravitational pull on the book?",
+    "options": [
+     "The table's normal force on the book",
+     "The book's gravitational pull on the Earth",
+     "The book's push on the table",
+     "Air resistance on the book"
+    ],
+    "answer": "B",
+    "explain": "The pair must be the same type of force (gravity) acting on the other body (the Earth). The normal force is a different type of force, so it is not the pair even though it balances the weight."
+   }
+  },
+  {
+   "title": "Momentum and impulse",
+   "body": "**Momentum** is mass × velocity. It is a vector, measured in $\\text{kg m s}^{-1}$ (or N s).",
+   "formula": "$$p = mv \\qquad J = F\\Delta t = \\Delta p$$",
+   "figure": {
+    "svg": "<svg viewBox=\"0 0 420 240\" width=\"420\" role=\"img\" aria-label=\"Force-time graph: area equals impulse\"><defs><marker id=\"ah13233A\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#13233A\"/></marker></defs><path d=\"M60 190 C 120 190, 140 60, 200 60 C 260 60, 280 190, 340 190 Z\" fill=\"#0E9F8E\" fill-opacity=\".25\" stroke=\"#0E9F8E\" stroke-width=\"3\"/><line x1=\"60\" y1=\"200\" x2=\"390\" y2=\"200\" stroke=\"#13233A\" stroke-width=\"2\" marker-end=\"url(#ah13233A)\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"25\" stroke=\"#13233A\" stroke-width=\"2\" marker-end=\"url(#ah13233A)\"/><text x=\"385\" y=\"225\" fill=\"#13233A\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"end\">time t</text><text x=\"50\" y=\"30\" fill=\"#13233A\" font-family=\"Inter, sans-serif\" font-size=\"14\" text-anchor=\"end\">F</text><text x=\"200\" y=\"140\" fill=\"#13233A\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"middle\">Area = impulse = Δp</text></svg>",
+    "caption": "When the force changes, the impulse is the area under the force–time graph."
+   },
+   "key": "Increasing the time of an impact reduces the force for the same change in momentum. That is how airbags, crumple zones and bending your knees on landing protect you.",
+   "check": {
+    "question": "A $0.50\\text{ kg}$ ball hits a wall at $4.0\\text{ m s}^{-1}$ and bounces straight back at $4.0\\text{ m s}^{-1}$. What is the size of its change in momentum?",
+    "options": [
+     "0 N s",
+     "2.0 N s",
+     "4.0 N s",
+     "8.0 N s"
+    ],
+    "answer": "C",
+    "explain": "Velocity changes from $+4.0$ to $-4.0$, so $\\Delta p = 0.50 \\times 8.0 = 4.0\\text{ N s}$. Direction matters!"
+   }
+  },
+  {
+   "title": "Conservation of momentum",
+   "body": "In an **isolated system** (no external resultant force), the total momentum before an interaction equals the total momentum after it. This works for collisions and for explosions.",
+   "figure": {
+    "svg": "<svg viewBox=\"0 0 460 230\" width=\"460\" role=\"img\" aria-label=\"Two trolleys before and after sticking together\"><defs><marker id=\"ah0E9F8E\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#0E9F8E\"/></marker><marker id=\"ahF2994A\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"#F2994A\"/></marker></defs><text x=\"20\" y=\"30\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"start\">Before</text><rect x=\"40\" y=\"45\" width=\"90\" height=\"45\" rx=\"8\" fill=\"#13233A\"/><text x=\"85\" y=\"74\" fill=\"#fff\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"middle\">2.0 kg</text><line x1=\"135\" y1=\"67\" x2=\"205\" y2=\"67\" stroke=\"#F2994A\" stroke-width=\"4\" marker-end=\"url(#ahF2994A)\"/><text x=\"170\" y=\"58\" fill=\"#F2994A\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">3.0 m/s</text><rect x=\"250\" y=\"45\" width=\"60\" height=\"45\" rx=\"8\" fill=\"#5B6575\"/><text x=\"280\" y=\"74\" fill=\"#fff\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">1.0 kg</text><text x=\"380\" y=\"74\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">at rest</text><line x1=\"20\" y1=\"120\" x2=\"440\" y2=\"120\" stroke=\"#E6E2D8\" stroke-dasharray=\"4 4\"/><text x=\"20\" y=\"150\" fill=\"#5B6575\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"start\">After</text><rect x=\"150\" y=\"165\" width=\"90\" height=\"45\" rx=\"8\" fill=\"#13233A\"/><rect x=\"240\" y=\"165\" width=\"60\" height=\"45\" rx=\"8\" fill=\"#5B6575\"/><text x=\"225\" y=\"194\" fill=\"#fff\" font-family=\"Inter, sans-serif\" font-size=\"15\" text-anchor=\"middle\">3.0 kg</text><line x1=\"305\" y1=\"187\" x2=\"375\" y2=\"187\" stroke=\"#0E9F8E\" stroke-width=\"4\" marker-end=\"url(#ah0E9F8E)\"/><text x=\"340\" y=\"178\" fill=\"#0E9F8E\" font-family=\"Inter, sans-serif\" font-size=\"13\" text-anchor=\"middle\">v = ?</text></svg>",
+    "caption": "A 2.0 kg trolley collides with a stationary 1.0 kg trolley and they stick together."
+   },
+   "example": "Total momentum before $= 2.0 \\times 3.0 + 1.0 \\times 0 = 6.0\\text{ kg m s}^{-1}$.\n\nAfter: $3.0\\,v = 6.0$, so $v = 2.0\\text{ m s}^{-1}$.\n\nKinetic energy before $= 9.0\\text{ J}$, after $= 6.0\\text{ J}$. Momentum is conserved but kinetic energy is not: this collision is **inelastic**.",
+   "check": {
+    "question": "A $60\\text{ kg}$ skater at rest throws a $3.0\\text{ kg}$ ball forwards at $10\\text{ m s}^{-1}$. What is the skater's recoil speed?",
+    "options": [
+     "0.30 m/s",
+     "0.50 m/s",
+     "2.0 m/s",
+     "5.0 m/s"
+    ],
+    "answer": "B",
+    "explain": "Total momentum stays zero: $60\\,v = 3.0 \\times 10$, so $v = 0.50\\text{ m s}^{-1}$ backwards."
+   }
+  },
+  {
+   "title": "Summary",
+   "body": "- Draw free-body diagrams with only the forces acting **on** the object.\n- Resultant force zero means constant velocity (first law).\n- $F = ma$, or more generally $F = \\Delta p / \\Delta t$ (second law).\n- Force pairs are equal, opposite, same type and act on different bodies (third law).\n- Impulse $F\\Delta t = \\Delta p$ = area under an F–t graph.\n- In an isolated system, momentum is always conserved; kinetic energy is conserved only in elastic collisions.\n\nNow test yourself on real questions."
+  }
+ ]
+}

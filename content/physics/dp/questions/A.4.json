@@ -1,0 +1,13 @@
+[
+  {
+    "id": "phys-dp-A4-001",
+    "paper": "1A",
+    "level": "HL",
+    "subtopics": ["A.4"],
+    "stem": "A wheel with moment of inertia $0.50\\text{ kg m}^2$ starts from rest. A constant torque of $2.0\\text{ N m}$ acts on it for $3.0\\text{ s}$. What is the final angular velocity of the wheel?",
+    "options": ["$3.0\\text{ rad s}^{-1}$", "$6.0\\text{ rad s}^{-1}$", "$12\\text{ rad s}^{-1}$", "$24\\text{ rad s}^{-1}$"],
+    "answer": "C",
+    "markscheme": ["$\\alpha = \\tau / I = 2.0 / 0.50 = 4.0\\text{ rad s}^{-2}$; $\\omega = \\alpha t = 12\\text{ rad s}^{-1}$"],
+    "source": "IBCommons original"
+  }
+]

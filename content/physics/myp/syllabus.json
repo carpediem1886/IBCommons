@@ -1,0 +1,29 @@
+{
+  "subject": "Physics",
+  "program": "myp",
+  "note": "Placeholder topic list for MYP Sciences (physics). It will be replaced with your school's units once the MYP guide is added.",
+  "papers": [
+    { "id": "A", "name": "Criterion A · Knowing and understanding", "short": "Crit. A", "minutesPerMark": 1.2 },
+    { "id": "B", "name": "Criterion B · Inquiring and designing", "short": "Crit. B", "minutesPerMark": 1.5 },
+    { "id": "C", "name": "Criterion C · Processing and evaluating", "short": "Crit. C", "minutesPerMark": 1.5 },
+    { "id": "D", "name": "Criterion D · Reflecting on the impacts of science", "short": "Crit. D", "minutesPerMark": 1.5 }
+  ],
+  "topics": [
+    { "code": "M1", "title": "Motion and forces", "subtopics": [
+      { "code": "M1.1", "title": "Speed, velocity and acceleration" },
+      { "code": "M1.2", "title": "Forces and Newton's laws" }
+    ]},
+    { "code": "M2", "title": "Energy", "subtopics": [
+      { "code": "M2.1", "title": "Energy stores and transfers" },
+      { "code": "M2.2", "title": "Work, power and efficiency" }
+    ]},
+    { "code": "M3", "title": "Waves", "subtopics": [
+      { "code": "M3.1", "title": "Properties of waves" },
+      { "code": "M3.2", "title": "Sound and light" }
+    ]},
+    { "code": "M4", "title": "Electricity and magnetism", "subtopics": [
+      { "code": "M4.1", "title": "Circuits" },
+      { "code": "M4.2", "title": "Magnetism and electromagnetism" }
+    ]}
+  ]
+}

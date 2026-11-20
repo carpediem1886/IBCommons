@@ -1,0 +1,40 @@
+[
+  {
+    "id": "phys-dp-A3-001",
+    "paper": "1A",
+    "level": "SL",
+    "subtopics": ["A.3"],
+    "stem": "A motor lifts a $50\\text{ kg}$ load through a height of $12\\text{ m}$ at constant speed in $20\\text{ s}$. What is the useful power output of the motor? ($g = 9.8\\text{ m s}^{-2}$)",
+    "options": ["30 W", "290 W", "600 W", "5900 W"],
+    "answer": "B",
+    "markscheme": ["$P = mgh / t = 50 \\times 9.8 \\times 12 / 20 \\approx 290\\text{ W}$"],
+    "source": "IBCommons original"
+  },
+  {
+    "id": "phys-dp-A3-002",
+    "paper": "2",
+    "level": "SL",
+    "subtopics": ["A.3"],
+    "stem": "A ball of mass $0.20\\text{ kg}$ is dropped from a height of $2.0\\text{ m}$ onto a hard floor. It rebounds to a height of $1.5\\text{ m}$. Ignore air resistance and take $g = 9.8\\text{ m s}^{-2}$.",
+    "parts": [
+      {
+        "label": "a", "marks": 2,
+        "text": "Calculate the kinetic energy of the ball just before it hits the floor.",
+        "answer": { "value": 3.92, "unit": "J", "tolerance": 0.03 },
+        "markscheme": ["Loss of gravitational potential energy = gain in kinetic energy", "$E_k = mgh = 0.20 \\times 9.8 \\times 2.0 = 3.9\\text{ J}$"]
+      },
+      {
+        "label": "b", "marks": 2,
+        "text": "Calculate the fraction of the ball's energy that is lost in the bounce.",
+        "answer": { "value": 0.25, "tolerance": 0.02 },
+        "markscheme": ["Energy after bounce $= mg \\times 1.5$; energy lost $= mg \\times 0.5$", "Fraction lost $= 0.5 / 2.0 = 0.25$ (25%)"]
+      },
+      {
+        "label": "c", "marks": 1,
+        "text": "Suggest what happens to the energy that is lost.",
+        "markscheme": ["Transferred to internal (thermal) energy of the ball and floor and/or to sound"]
+      }
+    ],
+    "source": "IBCommons original"
+  }
+]

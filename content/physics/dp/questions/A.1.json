@@ -1,0 +1,51 @@
+[
+  {
+    "id": "phys-dp-A1-001",
+    "paper": "1A",
+    "level": "SL",
+    "subtopics": ["A.1"],
+    "stem": "A car accelerates uniformly from rest to $24\\text{ m s}^{-1}$ in $8.0\\text{ s}$. What distance does the car travel in this time?",
+    "options": ["48 m", "96 m", "192 m", "3.0 m"],
+    "answer": "B",
+    "markscheme": ["Distance = average velocity × time = ½ × 24 × 8.0 = 96 m."],
+    "source": "IBCommons original"
+  },
+  {
+    "id": "phys-dp-A1-002",
+    "paper": "1A",
+    "level": "SL",
+    "subtopics": ["A.1"],
+    "stem": "A ball is thrown vertically upwards. Air resistance is negligible. What is the acceleration of the ball at its highest point?",
+    "options": ["Zero", "$g$ downwards", "$g$ upwards", "It depends on the initial speed"],
+    "answer": "B",
+    "markscheme": ["Only gravity acts on the ball at every point of its flight, so the acceleration is always $g$ downwards, even when the velocity is momentarily zero."],
+    "source": "IBCommons original"
+  },
+  {
+    "id": "phys-dp-A1-003",
+    "paper": "2",
+    "level": "SL",
+    "subtopics": ["A.1"],
+    "stem": "A stone is dropped from rest from a bridge $45\\text{ m}$ above the water. Assume air resistance is negligible and take $g = 9.8\\text{ m s}^{-2}$.",
+    "parts": [
+      {
+        "label": "a", "marks": 2,
+        "text": "Calculate the time taken for the stone to reach the water.",
+        "answer": { "value": 3.03, "unit": "s", "tolerance": 0.03 },
+        "markscheme": ["Uses $s = \\tfrac{1}{2}gt^2$ with $s = 45$ m", "$t = \\sqrt{2 \\times 45 / 9.8} = 3.0$ s"]
+      },
+      {
+        "label": "b", "marks": 2,
+        "text": "Calculate the speed of the stone as it hits the water.",
+        "answer": { "value": 29.7, "unit": "m s^{-1}", "tolerance": 0.03 },
+        "markscheme": ["Uses $v = gt$ or $v^2 = 2gs$", "$v = 29.7 \\approx 30\\text{ m s}^{-1}$ (allow ECF from (a))"]
+      },
+      {
+        "label": "c", "marks": 2,
+        "text": "Explain how air resistance would change the time taken for the stone to fall.",
+        "markscheme": ["Air resistance acts upwards / opposes the motion, so the resultant force (and acceleration) is less than $mg$ (less than $g$)", "So the stone takes longer to fall"]
+      }
+    ],
+    "source": "IBCommons original"
+  }
+]

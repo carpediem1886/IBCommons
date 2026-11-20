@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IBCommons · Open questionbank and revision for IB students</title>
+  <meta name="description" content="IBCommons is a free, open-source questionbank and revision platform for MYP and DP students.">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- KaTeX renders maths written as $...$ (inline) or $$...$$ (display) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+  <div id="demo-banner" class="demo-banner hidden">
+    Demo mode: accounts are saved only in this browser and the AI tutor is off. See README to connect Supabase.
+  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#/" aria-label="IBCommons home"><img src="assets/brand/IBCommons-horizontal-color.svg" alt="IBCommons"></a>
+      <nav class="nav" id="nav"></nav>
+    </div>
+  </header>
+
+  <main><div class="wrap" id="view"></div></main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>IBCommons is a student-built, open-source project. It is not affiliated with or endorsed by the International Baccalaureate Organization.</span>
+      <span><a href="https://github.com/" id="repo-link" target="_blank" rel="noopener">Source on GitHub</a></span>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[
+  { "id": "physics", "name": "Physics", "group": "Sciences", "programs": ["dp", "myp"], "status": "live" },
+  { "id": "chemistry", "name": "Chemistry", "group": "Sciences", "programs": ["dp", "myp"], "status": "soon" },
+  { "id": "biology", "name": "Biology", "group": "Sciences", "programs": ["dp", "myp"], "status": "soon" },
+  { "id": "math-aa", "name": "Mathematics: Analysis and Approaches", "group": "Mathematics", "programs": ["dp"], "status": "soon" }
+]
