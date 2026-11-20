@@ -98,27 +98,6 @@ function renderNav(user, parts) {
 }
 
 // ---------- Pages ----------
-// Homepage illustration: the official mark, untouched, with hand-drawn notes around it.
-// Coordinates match the mark's own SVG (tiles 28 wide at 0 / 36 / 72; the dot at 50,50).
-const HERO_SKETCH = `
-  <svg class="hero-sketch" viewBox="-14 -20 200 166" role="img"
-       aria-label="The IBCommons mark: you are the orange dot, and the last tile is the finish">
-    <defs>
-      <filter id="sk"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter>
-      <marker id="sk-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M1 1 L8 5 L1 9" fill="none" stroke="#5B6575" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </marker>
-    </defs>
-    <image href="assets/brand/IBCommons-mark-color.svg" x="-12" y="-12" width="124" height="124"/>
-    <g class="sk-lines" filter="url(#sk)">
-      <path d="M 128 118 Q 116 112 105 98" marker-end="url(#sk-arrow)"/>
-      <path d="M 116 54 Q 92 64 64 52" marker-end="url(#sk-arrow)"/>
-    </g>
-    <text class="sk-num" x="86" y="92">7</text>
-    <text class="sk-word" x="130" y="128">finish</text>
-    <text class="sk-you" x="119" y="60">you!</text>
-  </svg>`;
-
 // A subject card: live subjects link onwards; the rest are shown "under construction".
 function subjectCard(s, href) {
   const chips = ["dp", "myp"].filter((p) => s.programs.includes(p))
@@ -158,7 +137,7 @@ async function renderLanding() {
         </div>
         <p class="small muted" style="margin-top:14px">For MYP and DP students. More subjects coming soon.</p>
       </div>
-      <div class="hero-art">${HERO_SKETCH}</div>
+      <div class="hero-art"><img src="assets/brand/IBCommons-mark-color.svg" alt="" width="300" height="300"></div>
     </section>
     <section class="grid grid-3">
       ${TOOLS.map((t) => `
