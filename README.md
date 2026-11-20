@@ -57,7 +57,7 @@ python3 tools/build_index.py
 2. In **Project Settings → API**, copy the *Project URL* and the *anon public* key into [`assets/js/config.js`](assets/js/config.js). The anon key is meant to be public.
 3. In **Authentication → URL Configuration**, set the *Site URL* to your published address (for example `https://<you>.github.io/IBCommons/`).
 4. Optional: enable Google sign-in under **Authentication → Providers**, then set `GOOGLE_SIGN_IN: true` in `config.js`.
-5. In the **SQL editor**, run [`supabase/migrations/001_ai_usage.sql`](supabase/migrations/001_ai_usage.sql). It creates the per-student daily AI limit.
+5. In the **SQL editor**, run [`supabase/migrations/20261120000000_ai_usage.sql`](supabase/migrations/20261120000000_ai_usage.sql). It creates the per-student daily AI limit.
 6. Deploy the AI function with the [Supabase CLI](https://supabase.com/docs/guides/cli):
 
    ```bash
