@@ -3,11 +3,38 @@
     "id": "phys-dp-A4-001",
     "paper": "1A",
     "level": "HL",
-    "subtopics": ["A.4"],
+    "subtopics": [
+      "A.4"
+    ],
     "stem": "A wheel with moment of inertia $0.50\\text{ kg m}^2$ starts from rest. A constant torque of $2.0\\text{ N m}$ acts on it for $3.0\\text{ s}$. What is the final angular velocity of the wheel?",
-    "options": ["$3.0\\text{ rad s}^{-1}$", "$6.0\\text{ rad s}^{-1}$", "$12\\text{ rad s}^{-1}$", "$24\\text{ rad s}^{-1}$"],
+    "options": [
+      "$3.0\\text{ rad s}^{-1}$",
+      "$6.0\\text{ rad s}^{-1}$",
+      "$12\\text{ rad s}^{-1}$",
+      "$24\\text{ rad s}^{-1}$"
+    ],
     "answer": "C",
-    "markscheme": ["$\\alpha = \\tau / I = 2.0 / 0.50 = 4.0\\text{ rad s}^{-2}$; $\\omega = \\alpha t = 12\\text{ rad s}^{-1}$"],
-    "source": "IBCommons original"
+    "markscheme": [
+      "$\\alpha = \\tau / I = 2.0 / 0.50 = 4.0\\text{ rad s}^{-2}$; $\\omega = \\alpha t = 12\\text{ rad s}^{-1}$"
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Rotational Newton's second law",
+        "text": "For rotation, torque plays the role of force and moment of inertia plays the role of mass: $\\tau = I\\alpha$."
+      },
+      {
+        "title": "Angular acceleration",
+        "text": "$\\alpha = \\dfrac{\\tau}{I} = \\dfrac{2.0}{0.50} = 4.0\\text{ rad s}^{-2}$"
+      },
+      {
+        "title": "Use the time",
+        "text": "Starting from rest, $\\omega = \\omega_0 + \\alpha t$ with $\\omega_0 = 0$."
+      },
+      {
+        "title": "Final answer",
+        "text": "$\\omega = 4.0 \\times 3.0 = 12\\text{ rad s}^{-1}$, so the answer is **C**."
+      }
+    ]
   }
 ]

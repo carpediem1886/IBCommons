@@ -21,6 +21,17 @@ def load(path):
         raise SystemExit(f"{path}: invalid JSON ({e})")
 
 
+def check_help(steps, where, errors):
+    if steps is None:
+        return
+    if not isinstance(steps, list) or len(steps) < 2:
+        errors.append(f"{where}: help needs at least 2 steps (the last one is the answer)")
+        return
+    for i, s in enumerate(steps, 1):
+        if not isinstance(s, dict) or not s.get("text"):
+            errors.append(f"{where}: help step {i} needs a text")
+
+
 def check_question(q, where, codes, papers, errors):
     qid = q.get("id")
     if not qid:
@@ -41,6 +52,7 @@ def check_question(q, where, codes, papers, errors):
         letters = [chr(65 + i) for i in range(len(q["options"]))]
         if q.get("answer") not in letters:
             errors.append(f"{w}: answer must be one of {letters}")
+        check_help(q.get("help"), w, errors)
     else:
         parts = q.get("parts") or []
         if not parts and not q.get("marks"):
@@ -50,6 +62,7 @@ def check_question(q, where, codes, papers, errors):
                 errors.append(f"{w} part {p.get('label', '?')}: marks must be a whole number ≥ 1")
             if not p.get("markscheme"):
                 errors.append(f"{w} part {p.get('label', '?')}: missing markscheme")
+            check_help(p.get("help"), f"{w} part {p.get('label', '?')}", errors)
 
 
 def build(program_dir, errors):

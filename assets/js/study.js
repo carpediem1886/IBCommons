@@ -3,6 +3,7 @@ import { loadIndex, loadQuestions } from "./data.js";
 import { segmented, topicTree, paperOptions, levelFilter } from "./picker.js";
 import { $, $$, esc, md, renderMath, emptyState, progress } from "./util.js";
 import { AI_ENABLED, callAI, questionForAI } from "./ai.js";
+import { openHelp } from "./help.js";
 
 export async function renderStudy({ program, subject, syllabus, view, user }) {
   const index = await loadIndex(subject.id, program.id);
@@ -67,6 +68,7 @@ function questionCard(q, n, record, syllabus) {
         return `<label data-letter="${L}"><input type="radio" name="mcq-${esc(q.id)}" value="${L}"><span class="letter">${L}</span><span>${md(o).replace(/^<p>|<\/p>$/g, "")}</span></label>`;
       }).join("")}</div>
       <div class="answer-actions"><button class="btn btn-primary btn-sm" data-act="check-mcq">Check answer</button>
+      ${q.help?.length ? `<button class="btn btn-ghost btn-sm" data-act="help">Help, step by step</button>` : ""}
       ${AI_ENABLED ? `<button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button>` : ""}</div>
       <div class="feedback" data-fb="mcq"></div>`
     : q.parts.map((p, k) => `
@@ -77,12 +79,13 @@ function questionCard(q, n, record, syllabus) {
           <textarea placeholder="Write your answer${p.answer?.unit ? " (include units)" : ""}…" data-input="${k}"></textarea>
           <div class="answer-actions">
             <button class="btn btn-primary btn-sm" data-act="check" data-k="${k}">Check answer</button>
+            ${p.help?.length ? `<button class="btn btn-ghost btn-sm" data-act="help" data-k="${k}">Help, step by step</button>` : ""}
             <button class="btn btn-ghost btn-sm" data-act="ms" data-k="${k}">Show markscheme</button>
           </div>
           <div class="feedback" data-fb="${k}"></div>
         </div>
       </div>`).join("") + (AI_ENABLED ? `<div class="answer-actions" style="margin-top:16px"><button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button></div>` : "");
-  return `<article class="card q-card" id="q-${esc(q.id)}">
+  return `<article class="card q-card" id="q-${esc(q.id)}" data-n="${n}">
     <div class="q-meta"><span class="chip">Q${n}</span><span class="chip">${esc(q.subtopics.join(", "))}</span><span class="chip">${esc(paperName(syllabus, q.paper))}</span>${q.level === "HL" ? '<span class="hl-tag">HL</span>' : ""}${status}<span class="marks">${q.marks} mark${q.marks === 1 ? "" : "s"}</span></div>
     <div class="q-text">${md(q.stem)}${q.image ? `<img src="${esc(q.image)}" alt="Diagram">` : ""}</div>
     ${body}
@@ -172,6 +175,13 @@ function wireQuestion(q, user, onProgress) {
     }
 
     if (act === "tutor") openTutor(card, q);
+
+    if (act === "help") {
+      const k = btn.dataset.k;
+      const part = k === undefined ? null : q.parts[+k];
+      const title = `Question ${card.dataset.n}${part?.label ? ` (${part.label})` : ""}`;
+      openHelp(`${q.id}:${k ?? ""}`, title, part ? part.help : q.help);
+    }
   });
 }
 

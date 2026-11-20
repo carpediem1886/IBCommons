@@ -2,14 +2,37 @@
   {
     "id": "phys-myp-M11-001",
     "paper": "A",
-    "subtopics": ["M1.1"],
+    "subtopics": [
+      "M1.1"
+    ],
     "stem": "A cyclist travels $3.6\\text{ km}$ in $12$ minutes.",
     "parts": [
       {
-        "label": "a", "marks": 2,
+        "label": "a",
+        "marks": 2,
         "text": "Calculate the cyclist's average speed in $\\text{m s}^{-1}$.",
-        "answer": { "value": 5.0, "unit": "m s^{-1}" },
-        "markscheme": ["Converts units: 3600 m and 720 s", "speed = 3600 / 720 = 5.0 m/s"]
+        "answer": {
+          "value": 5.0,
+          "unit": "m s^{-1}"
+        },
+        "markscheme": [
+          "Converts units: 3600 m and 720 s",
+          "speed = 3600 / 720 = 5.0 m/s"
+        ],
+        "help": [
+          {
+            "title": "The formula",
+            "text": "Average speed = total distance ÷ total time. For an answer in m/s, which units must the distance and time be in?"
+          },
+          {
+            "title": "Convert units",
+            "text": "$3.6\\text{ km} = 3600\\text{ m}$ and $12\\text{ min} = 12 \\times 60 = 720\\text{ s}$."
+          },
+          {
+            "title": "Final answer",
+            "text": "$\\text{speed} = \\dfrac{3600}{720} = 5.0\\text{ m/s}$"
+          }
+        ]
       }
     ],
     "source": "IBCommons original"
@@ -17,11 +40,34 @@
   {
     "id": "phys-myp-M11-002",
     "paper": "A",
-    "subtopics": ["M1.1"],
+    "subtopics": [
+      "M1.1"
+    ],
     "stem": "Which of these quantities is a vector?",
-    "options": ["Speed", "Distance", "Velocity", "Time"],
+    "options": [
+      "Speed",
+      "Distance",
+      "Velocity",
+      "Time"
+    ],
     "answer": "C",
-    "markscheme": ["Velocity has both size and direction, so it is a vector."],
-    "source": "IBCommons original"
+    "markscheme": [
+      "Velocity has both size and direction, so it is a vector."
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Scalar or vector?",
+        "text": "A **scalar** has only a size. A **vector** has a size **and** a direction."
+      },
+      {
+        "title": "Check each option",
+        "text": "Which of the four tells you which way something is moving, not just how fast or how far?"
+      },
+      {
+        "title": "Final answer",
+        "text": "**Velocity** is speed in a given direction, so it is a vector. The answer is **C**."
+      }
+    ]
   }
 ]

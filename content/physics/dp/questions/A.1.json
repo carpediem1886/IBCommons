@@ -3,47 +3,173 @@
     "id": "phys-dp-A1-001",
     "paper": "1A",
     "level": "SL",
-    "subtopics": ["A.1"],
+    "subtopics": [
+      "A.1"
+    ],
     "stem": "A car accelerates uniformly from rest to $24\\text{ m s}^{-1}$ in $8.0\\text{ s}$. What distance does the car travel in this time?",
-    "options": ["48 m", "96 m", "192 m", "3.0 m"],
+    "options": [
+      "48 m",
+      "96 m",
+      "192 m",
+      "3.0 m"
+    ],
     "answer": "B",
-    "markscheme": ["Distance = average velocity × time = ½ × 24 × 8.0 = 96 m."],
-    "source": "IBCommons original"
+    "markscheme": [
+      "Distance = average velocity × time = ½ × 24 × 8.0 = 96 m."
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "What do you know?",
+        "text": "The car starts from rest, so $u = 0$. It reaches $v = 24\\text{ m s}^{-1}$ after $t = 8.0\\text{ s}$, and the acceleration is uniform. You need the distance $s$."
+      },
+      {
+        "title": "Choose a method",
+        "text": "When acceleration is uniform, the **average velocity** is halfway between the start and end velocities: $\\dfrac{u + v}{2}$.\n\nDistance = average velocity × time. (This is the same as the area under a velocity–time graph.)"
+      },
+      {
+        "title": "Find the average velocity",
+        "text": "$\\dfrac{0 + 24}{2} = 12\\text{ m s}^{-1}$. Now multiply by the time."
+      },
+      {
+        "title": "Final answer",
+        "text": "$s = 12 \\times 8.0 = 96\\text{ m}$, so the answer is **B**."
+      }
+    ]
   },
   {
     "id": "phys-dp-A1-002",
     "paper": "1A",
     "level": "SL",
-    "subtopics": ["A.1"],
+    "subtopics": [
+      "A.1"
+    ],
     "stem": "A ball is thrown vertically upwards. Air resistance is negligible. What is the acceleration of the ball at its highest point?",
-    "options": ["Zero", "$g$ downwards", "$g$ upwards", "It depends on the initial speed"],
+    "options": [
+      "Zero",
+      "$g$ downwards",
+      "$g$ upwards",
+      "It depends on the initial speed"
+    ],
     "answer": "B",
-    "markscheme": ["Only gravity acts on the ball at every point of its flight, so the acceleration is always $g$ downwards, even when the velocity is momentarily zero."],
-    "source": "IBCommons original"
+    "markscheme": [
+      "Only gravity acts on the ball at every point of its flight, so the acceleration is always $g$ downwards, even when the velocity is momentarily zero."
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Which forces act?",
+        "text": "Air resistance is negligible. At the highest point (and everywhere else in the flight), which force still acts on the ball?"
+      },
+      {
+        "title": "Link force to acceleration",
+        "text": "Only the ball's **weight** acts. Newton's second law says acceleration = resultant force ÷ mass, and the weight does not switch off at the top."
+      },
+      {
+        "title": "Velocity is not acceleration",
+        "text": "At the top the velocity is momentarily zero, but it is **changing**, from upwards to downwards. A changing velocity means there is an acceleration."
+      },
+      {
+        "title": "Final answer",
+        "text": "The acceleration is $g$ downwards at every point, including the top, so the answer is **B**."
+      }
+    ]
   },
   {
     "id": "phys-dp-A1-003",
     "paper": "2",
     "level": "SL",
-    "subtopics": ["A.1"],
+    "subtopics": [
+      "A.1"
+    ],
     "stem": "A stone is dropped from rest from a bridge $45\\text{ m}$ above the water. Assume air resistance is negligible and take $g = 9.8\\text{ m s}^{-2}$.",
     "parts": [
       {
-        "label": "a", "marks": 2,
+        "label": "a",
+        "marks": 2,
         "text": "Calculate the time taken for the stone to reach the water.",
-        "answer": { "value": 3.03, "unit": "s", "tolerance": 0.03 },
-        "markscheme": ["Uses $s = \\tfrac{1}{2}gt^2$ with $s = 45$ m", "$t = \\sqrt{2 \\times 45 / 9.8} = 3.0$ s"]
+        "answer": {
+          "value": 3.03,
+          "unit": "s",
+          "tolerance": 0.03
+        },
+        "markscheme": [
+          "Uses $s = \\tfrac{1}{2}gt^2$ with $s = 45$ m",
+          "$t = \\sqrt{2 \\times 45 / 9.8} = 3.0$ s"
+        ],
+        "help": [
+          {
+            "title": "List the quantities",
+            "text": "Dropped from rest: $u = 0$. Distance fallen $s = 45\\text{ m}$, acceleration $a = g = 9.8\\text{ m s}^{-2}$. You need the time $t$."
+          },
+          {
+            "title": "Pick an equation",
+            "text": "You don't know the final velocity $v$, so use the equation without it: $s = ut + \\tfrac{1}{2}at^2$. With $u = 0$ this becomes $s = \\tfrac{1}{2}gt^2$."
+          },
+          {
+            "title": "Rearrange",
+            "text": "$t = \\sqrt{\\dfrac{2s}{g}}$. Substitute the values."
+          },
+          {
+            "title": "Final answer",
+            "text": "$t = \\sqrt{\\dfrac{2 \\times 45}{9.8}} = \\sqrt{9.18} = 3.0\\text{ s}$"
+          }
+        ]
       },
       {
-        "label": "b", "marks": 2,
+        "label": "b",
+        "marks": 2,
         "text": "Calculate the speed of the stone as it hits the water.",
-        "answer": { "value": 29.7, "unit": "m s^{-1}", "tolerance": 0.03 },
-        "markscheme": ["Uses $v = gt$ or $v^2 = 2gs$", "$v = 29.7 \\approx 30\\text{ m s}^{-1}$ (allow ECF from (a))"]
+        "answer": {
+          "value": 29.7,
+          "unit": "m s^{-1}",
+          "tolerance": 0.03
+        },
+        "markscheme": [
+          "Uses $v = gt$ or $v^2 = 2gs$",
+          "$v = 29.7 \\approx 30\\text{ m s}^{-1}$ (allow ECF from (a))"
+        ],
+        "help": [
+          {
+            "title": "Choose an equation",
+            "text": "You can use your time from (a) with $v = u + at$, or avoid it completely with $v^2 = u^2 + 2as$. Which quantities do you know?"
+          },
+          {
+            "title": "Substitute",
+            "text": "Using $v^2 = u^2 + 2as$: $v^2 = 0 + 2 \\times 9.8 \\times 45 = 882$."
+          },
+          {
+            "title": "Final answer",
+            "text": "$v = \\sqrt{882} = 29.7 \\approx 30\\text{ m s}^{-1}$"
+          }
+        ]
       },
       {
-        "label": "c", "marks": 2,
+        "label": "c",
+        "marks": 2,
         "text": "Explain how air resistance would change the time taken for the stone to fall.",
-        "markscheme": ["Air resistance acts upwards / opposes the motion, so the resultant force (and acceleration) is less than $mg$ (less than $g$)", "So the stone takes longer to fall"]
+        "markscheme": [
+          "Air resistance acts upwards / opposes the motion, so the resultant force (and acceleration) is less than $mg$ (less than $g$)",
+          "So the stone takes longer to fall"
+        ],
+        "help": [
+          {
+            "title": "Direction of air resistance",
+            "text": "The stone moves downwards. Which way does air resistance act on it?"
+          },
+          {
+            "title": "Effect on the resultant force",
+            "text": "Air resistance acts **upwards**, against the motion. So the resultant force is weight minus air resistance, which is less than the weight."
+          },
+          {
+            "title": "Effect on the motion",
+            "text": "A smaller resultant force means a smaller acceleration (less than $g$), so the stone's speed builds up more slowly over the same 45 m."
+          },
+          {
+            "title": "Final answer",
+            "text": "Air resistance opposes the motion, so the resultant force and the acceleration are less than without it. The stone therefore **takes longer** to reach the water. (One mark for each of these two points.)"
+          }
+        ]
       }
     ],
     "source": "IBCommons original"

@@ -3,52 +3,185 @@
     "id": "phys-dp-A2-001",
     "paper": "1A",
     "level": "SL",
-    "subtopics": ["A.2"],
+    "subtopics": [
+      "A.2"
+    ],
     "stem": "A $2.0\\text{ kg}$ trolley moving at $3.0\\text{ m s}^{-1}$ collides with a stationary $1.0\\text{ kg}$ trolley and they move off together. What is the speed of the trolleys after the collision?",
-    "options": ["$1.0\\text{ m s}^{-1}$", "$1.5\\text{ m s}^{-1}$", "$2.0\\text{ m s}^{-1}$", "$3.0\\text{ m s}^{-1}$"],
+    "options": [
+      "$1.0\\text{ m s}^{-1}$",
+      "$1.5\\text{ m s}^{-1}$",
+      "$2.0\\text{ m s}^{-1}$",
+      "$3.0\\text{ m s}^{-1}$"
+    ],
     "answer": "C",
-    "markscheme": ["Momentum is conserved: $2.0 \\times 3.0 = 3.0\\,v$, so $v = 2.0\\text{ m s}^{-1}$."],
-    "source": "IBCommons original"
+    "markscheme": [
+      "Momentum is conserved: $2.0 \\times 3.0 = 3.0\\,v$, so $v = 2.0\\text{ m s}^{-1}$."
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Which law applies?",
+        "text": "Two trolleys collide and no external force acts on them. What quantity is conserved in every collision like this?"
+      },
+      {
+        "title": "Momentum before",
+        "text": "**Momentum** is conserved. Before: $p = 2.0 \\times 3.0 + 1.0 \\times 0 = 6.0\\text{ kg m s}^{-1}$."
+      },
+      {
+        "title": "Momentum after",
+        "text": "They move off together, so treat them as one object of mass $3.0\\text{ kg}$ with speed $v$: $p = 3.0\\,v$."
+      },
+      {
+        "title": "Final answer",
+        "text": "$3.0\\,v = 6.0$, so $v = 2.0\\text{ m s}^{-1}$. The answer is **C**."
+      }
+    ]
   },
   {
     "id": "phys-dp-A2-002",
     "paper": "1A",
     "level": "SL",
-    "subtopics": ["A.2"],
+    "subtopics": [
+      "A.2"
+    ],
     "stem": "A resultant force of $12\\text{ N}$ acts on a $4.0\\text{ kg}$ object for $2.0\\text{ s}$. What is the change in momentum of the object?",
-    "options": ["$3.0\\text{ N s}$", "$6.0\\text{ N s}$", "$24\\text{ N s}$", "$48\\text{ N s}$"],
+    "options": [
+      "$3.0\\text{ N s}$",
+      "$6.0\\text{ N s}$",
+      "$24\\text{ N s}$",
+      "$48\\text{ N s}$"
+    ],
     "answer": "C",
-    "markscheme": ["Impulse $= F\\Delta t = 12 \\times 2.0 = 24\\text{ N s}$ = change in momentum. The mass is not needed."],
-    "source": "IBCommons original"
+    "markscheme": [
+      "Impulse $= F\\Delta t = 12 \\times 2.0 = 24\\text{ N s}$ = change in momentum. The mass is not needed."
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Which idea links force and time?",
+        "text": "A force acting for a time gives an **impulse**. How is impulse related to change in momentum?"
+      },
+      {
+        "title": "Impulse = change in momentum",
+        "text": "$\\Delta p = F\\Delta t$. Do you need the mass to use this?"
+      },
+      {
+        "title": "Final answer",
+        "text": "No, the mass is not needed. $\\Delta p = 12 \\times 2.0 = 24\\text{ N s}$, so the answer is **C**."
+      }
+    ]
   },
   {
     "id": "phys-dp-A2-003",
     "paper": "2",
     "level": "SL",
-    "subtopics": ["A.2"],
+    "subtopics": [
+      "A.2"
+    ],
     "stem": "A car of mass $1200\\text{ kg}$ travelling at $15\\text{ m s}^{-1}$ brakes uniformly and comes to rest in $3.0\\text{ s}$.",
     "parts": [
       {
-        "label": "a", "marks": 1,
+        "label": "a",
+        "marks": 1,
         "text": "Calculate the magnitude of the deceleration of the car.",
-        "answer": { "value": 5.0, "unit": "m s^{-2}" },
-        "markscheme": ["$a = \\Delta v / \\Delta t = 15 / 3.0 = 5.0\\text{ m s}^{-2}$"]
+        "answer": {
+          "value": 5.0,
+          "unit": "m s^{-2}"
+        },
+        "markscheme": [
+          "$a = \\Delta v / \\Delta t = 15 / 3.0 = 5.0\\text{ m s}^{-2}$"
+        ],
+        "help": [
+          {
+            "title": "Definition",
+            "text": "Acceleration is the change in velocity divided by the time taken: $a = \\dfrac{\\Delta v}{\\Delta t}$."
+          },
+          {
+            "title": "Change in velocity",
+            "text": "The car goes from $15\\text{ m s}^{-1}$ to rest, so the size of the change is $15\\text{ m s}^{-1}$, over $3.0\\text{ s}$."
+          },
+          {
+            "title": "Final answer",
+            "text": "$a = \\dfrac{15}{3.0} = 5.0\\text{ m s}^{-2}$"
+          }
+        ]
       },
       {
-        "label": "b", "marks": 2,
+        "label": "b",
+        "marks": 2,
         "text": "Calculate the average braking force on the car.",
-        "answer": { "value": 6000, "unit": "N" },
-        "markscheme": ["Uses $F = ma$", "$F = 1200 \\times 5.0 = 6.0 \\times 10^{3}\\text{ N}$ (allow ECF from (a))"]
+        "answer": {
+          "value": 6000,
+          "unit": "N"
+        },
+        "markscheme": [
+          "Uses $F = ma$",
+          "$F = 1200 \\times 5.0 = 6.0 \\times 10^{3}\\text{ N}$ (allow ECF from (a))"
+        ],
+        "help": [
+          {
+            "title": "Which law?",
+            "text": "Newton's second law connects force, mass and acceleration: $F = ma$."
+          },
+          {
+            "title": "Substitute",
+            "text": "Use $m = 1200\\text{ kg}$ and your deceleration from (a)."
+          },
+          {
+            "title": "Final answer",
+            "text": "$F = 1200 \\times 5.0 = 6.0 \\times 10^{3}\\text{ N}$"
+          }
+        ]
       },
       {
-        "label": "c", "marks": 2,
+        "label": "c",
+        "marks": 2,
         "text": "State Newton's third law of motion. Identify the force that pairs with the frictional force of the road on the car.",
-        "markscheme": ["If body A exerts a force on body B, then B exerts a force of equal magnitude and opposite direction on A (forces of the same type)", "The frictional force of the car (tyres) on the road, acting forwards"]
+        "markscheme": [
+          "If body A exerts a force on body B, then B exerts a force of equal magnitude and opposite direction on A (forces of the same type)",
+          "The frictional force of the car (tyres) on the road, acting forwards"
+        ],
+        "help": [
+          {
+            "title": "Recall the law",
+            "text": "Newton's third law is about pairs of forces between **two** bodies. What do you know about their sizes, directions and types?"
+          },
+          {
+            "title": "Statement",
+            "text": "If body A exerts a force on body B, then B exerts a force on A that is **equal in size, opposite in direction and of the same type**."
+          },
+          {
+            "title": "Swap the bodies",
+            "text": "The force in the question is friction **of the road on the car**. Its partner is the same type of force with the two bodies swapped."
+          },
+          {
+            "title": "Final answer",
+            "text": "The pair is the frictional force **of the car (its tyres) on the road**, acting forwards."
+          }
+        ]
       },
       {
-        "label": "d", "marks": 2,
+        "label": "d",
+        "marks": 2,
         "text": "A seat belt stretches slightly during a sudden stop. Outline why this reduces the force on a passenger.",
-        "markscheme": ["The change in momentum of the passenger is the same", "but it takes place over a longer time, so $F = \\Delta p / \\Delta t$ is smaller"]
+        "markscheme": [
+          "The change in momentum of the passenger is the same",
+          "but it takes place over a longer time, so $F = \\Delta p / \\Delta t$ is smaller"
+        ],
+        "help": [
+          {
+            "title": "What doesn't change?",
+            "text": "Whatever the seat belt does, the passenger goes from moving to stopped. So their change in momentum $\\Delta p$ is fixed."
+          },
+          {
+            "title": "The key equation",
+            "text": "Force is the rate of change of momentum: $F = \\dfrac{\\Delta p}{\\Delta t}$. What does stretching do to $\\Delta t$?"
+          },
+          {
+            "title": "Final answer",
+            "text": "The change in momentum is the same, but stretching makes it happen over a **longer time**, so $F = \\Delta p / \\Delta t$ is **smaller**."
+          }
+        ]
       }
     ],
     "source": "IBCommons original"
@@ -57,19 +190,60 @@
     "id": "phys-dp-A2-004",
     "paper": "1B",
     "level": "SL",
-    "subtopics": ["A.2"],
+    "subtopics": [
+      "A.2"
+    ],
     "stem": "A student pulls a trolley along a horizontal bench with different constant forces $F$ and measures the acceleration $a$ each time.\n\nF / N: 0.50, 1.00, 1.50, 2.00\na / m s⁻²: 0.24, 0.51, 0.74, 1.01",
     "parts": [
       {
-        "label": "a", "marks": 2,
+        "label": "a",
+        "marks": 2,
         "text": "Use the data to determine the mass of the trolley.",
-        "answer": { "value": 1.95, "unit": "kg", "tolerance": 0.05 },
-        "markscheme": ["Mass is the gradient of a graph of $F$ against $a$ (or uses $\\Delta F / \\Delta a$ from two well-separated points)", "$m \\approx 1.9$ to $2.0\\text{ kg}$"]
+        "answer": {
+          "value": 1.95,
+          "unit": "kg",
+          "tolerance": 0.05
+        },
+        "markscheme": [
+          "Mass is the gradient of a graph of $F$ against $a$ (or uses $\\Delta F / \\Delta a$ from two well-separated points)",
+          "$m \\approx 1.9$ to $2.0\\text{ kg}$"
+        ],
+        "help": [
+          {
+            "title": "Link the graph to F = ma",
+            "text": "$F = ma$. If you plot $F$ on the y-axis against $a$ on the x-axis, you get a straight line. What does its gradient represent?"
+          },
+          {
+            "title": "Gradient = mass",
+            "text": "The gradient is $\\dfrac{\\Delta F}{\\Delta a} = m$. Use two points far apart, such as the first and last readings."
+          },
+          {
+            "title": "Calculate",
+            "text": "Gradient $= \\dfrac{2.00 - 0.50}{1.01 - 0.24} = \\dfrac{1.50}{0.77}$"
+          },
+          {
+            "title": "Final answer",
+            "text": "$m \\approx 1.9$ to $2.0\\text{ kg}$"
+          }
+        ]
       },
       {
-        "label": "b", "marks": 1,
+        "label": "b",
+        "marks": 1,
         "text": "Suggest why a graph of $F$ against $a$ might not pass exactly through the origin.",
-        "markscheme": ["Friction acts on the trolley, so some of the applied force is needed before it accelerates (or any reasonable systematic error, e.g. a zero error in the force meter)"]
+        "markscheme": [
+          "Friction acts on the trolley, so some of the applied force is needed before it accelerates (or any reasonable systematic error, e.g. a zero error in the force meter)"
+        ],
+        "help": [
+          {
+            "title": "Think about the intercept",
+            "text": "If the line misses the origin, some force is applied but produces no acceleration. Which force on the trolley could be cancelling part of the pull?"
+          },
+          {
+            "title": "Final answer",
+            "text": "**Friction** on the trolley: part of the applied force is needed to overcome it. (A zero error in the force meter is also accepted.)"
+          }
+        ]
       }
     ],
     "source": "IBCommons original"

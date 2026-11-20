@@ -3,36 +3,125 @@
     "id": "phys-dp-A3-001",
     "paper": "1A",
     "level": "SL",
-    "subtopics": ["A.3"],
+    "subtopics": [
+      "A.3"
+    ],
     "stem": "A motor lifts a $50\\text{ kg}$ load through a height of $12\\text{ m}$ at constant speed in $20\\text{ s}$. What is the useful power output of the motor? ($g = 9.8\\text{ m s}^{-2}$)",
-    "options": ["30 W", "290 W", "600 W", "5900 W"],
+    "options": [
+      "30 W",
+      "290 W",
+      "600 W",
+      "5900 W"
+    ],
     "answer": "B",
-    "markscheme": ["$P = mgh / t = 50 \\times 9.8 \\times 12 / 20 \\approx 290\\text{ W}$"],
-    "source": "IBCommons original"
+    "markscheme": [
+      "$P = mgh / t = 50 \\times 9.8 \\times 12 / 20 \\approx 290\\text{ W}$"
+    ],
+    "source": "IBCommons original",
+    "help": [
+      {
+        "title": "Useful work",
+        "text": "At constant speed, the motor's useful work goes into raising the load. That is the gain in gravitational potential energy, $mgh$."
+      },
+      {
+        "title": "Calculate the energy",
+        "text": "$mgh = 50 \\times 9.8 \\times 12 = 5880\\text{ J}$"
+      },
+      {
+        "title": "From energy to power",
+        "text": "Power is the rate of doing work: $P = \\dfrac{W}{t}$."
+      },
+      {
+        "title": "Final answer",
+        "text": "$P = \\dfrac{5880}{20} = 294 \\approx 290\\text{ W}$, so the answer is **B**."
+      }
+    ]
   },
   {
     "id": "phys-dp-A3-002",
     "paper": "2",
     "level": "SL",
-    "subtopics": ["A.3"],
+    "subtopics": [
+      "A.3"
+    ],
     "stem": "A ball of mass $0.20\\text{ kg}$ is dropped from a height of $2.0\\text{ m}$ onto a hard floor. It rebounds to a height of $1.5\\text{ m}$. Ignore air resistance and take $g = 9.8\\text{ m s}^{-2}$.",
     "parts": [
       {
-        "label": "a", "marks": 2,
+        "label": "a",
+        "marks": 2,
         "text": "Calculate the kinetic energy of the ball just before it hits the floor.",
-        "answer": { "value": 3.92, "unit": "J", "tolerance": 0.03 },
-        "markscheme": ["Loss of gravitational potential energy = gain in kinetic energy", "$E_k = mgh = 0.20 \\times 9.8 \\times 2.0 = 3.9\\text{ J}$"]
+        "answer": {
+          "value": 3.92,
+          "unit": "J",
+          "tolerance": 0.03
+        },
+        "markscheme": [
+          "Loss of gravitational potential energy = gain in kinetic energy",
+          "$E_k = mgh = 0.20 \\times 9.8 \\times 2.0 = 3.9\\text{ J}$"
+        ],
+        "help": [
+          {
+            "title": "Energy conservation",
+            "text": "With no air resistance, the gravitational potential energy the ball loses as it falls becomes kinetic energy."
+          },
+          {
+            "title": "Equation",
+            "text": "$E_k = \\Delta E_p = mg\\Delta h$"
+          },
+          {
+            "title": "Final answer",
+            "text": "$E_k = 0.20 \\times 9.8 \\times 2.0 = 3.9\\text{ J}$"
+          }
+        ]
       },
       {
-        "label": "b", "marks": 2,
+        "label": "b",
+        "marks": 2,
         "text": "Calculate the fraction of the ball's energy that is lost in the bounce.",
-        "answer": { "value": 0.25, "tolerance": 0.02 },
-        "markscheme": ["Energy after bounce $= mg \\times 1.5$; energy lost $= mg \\times 0.5$", "Fraction lost $= 0.5 / 2.0 = 0.25$ (25%)"]
+        "answer": {
+          "value": 0.25,
+          "tolerance": 0.02
+        },
+        "markscheme": [
+          "Energy after bounce $= mg \\times 1.5$; energy lost $= mg \\times 0.5$",
+          "Fraction lost $= 0.5 / 2.0 = 0.25$ (25%)"
+        ],
+        "help": [
+          {
+            "title": "Energy after the bounce",
+            "text": "At the top of the rebound the ball is momentarily still, so all of its energy is potential: $mg \\times 1.5$."
+          },
+          {
+            "title": "Energy lost",
+            "text": "Energy lost = $mg \\times 2.0 - mg \\times 1.5 = mg \\times 0.5$."
+          },
+          {
+            "title": "Fraction",
+            "text": "Fraction lost = energy lost ÷ starting energy. Notice that $mg$ cancels, so only the heights matter."
+          },
+          {
+            "title": "Final answer",
+            "text": "$\\dfrac{0.5}{2.0} = 0.25$ (25%)"
+          }
+        ]
       },
       {
-        "label": "c", "marks": 1,
+        "label": "c",
+        "marks": 1,
         "text": "Suggest what happens to the energy that is lost.",
-        "markscheme": ["Transferred to internal (thermal) energy of the ball and floor and/or to sound"]
+        "markscheme": [
+          "Transferred to internal (thermal) energy of the ball and floor and/or to sound"
+        ],
+        "help": [
+          {
+            "title": "Energy is conserved",
+            "text": "The 'lost' energy hasn't disappeared. During the impact, what happens to the ball and the floor, and what can you hear?"
+          },
+          {
+            "title": "Final answer",
+            "text": "It is transferred to **internal (thermal) energy** of the ball and floor, and to **sound**."
+          }
+        ]
       }
     ],
     "source": "IBCommons original"

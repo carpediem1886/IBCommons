@@ -72,6 +72,21 @@ Each file holds a list of questions. Put each question in the file for its main 
 | `answer` (part) | Optional. Add it for numerical answers: the site then checks the number instantly. `tolerance` is relative (0.02 = ±2 %). Without it, the AI marks the answer against the markscheme. |
 | `markscheme` | One string per marking point, one mark each. |
 | `source` | Where the question comes from. |
+| `help` | Optional step-by-step help, shown one step at a time behind a **Help** button. On a multiple-choice question, put it on the question. On a structured question, put it on each part. |
+
+### Step-by-step help
+
+```json
+"help": [
+  { "title": "What do you know?", "text": "List the given quantities: $u = 0$, ..." },
+  { "title": "Choose an equation", "text": "You don't know $v$, so use ..." },
+  { "title": "Final answer", "text": "$t = 3.0\\text{ s}$" }
+]
+```
+
+- Write 2–5 steps. The **last step is always the answer**. Students only see it after pressing "Show the answer".
+- Early steps should guide, not tell: ask a question or name the idea to use, so the student does the thinking.
+- Keep each step to one or two sentences.
 
 ## Revision lessons: `revision/<subtopic code>.json`
 
