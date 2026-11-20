@@ -17,7 +17,7 @@ export const CONFIG = {
   GOOGLE_SIGN_IN: false,
 
   // Link shown in the footer.
-  REPO_URL: "https://github.com/",
+  REPO_URL: "https://github.com/carpediem1886/IBCommons",
 };
 
 export const DEMO_MODE = !CONFIG.SUPABASE_URL || !CONFIG.SUPABASE_ANON_KEY;
