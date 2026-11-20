@@ -10,8 +10,8 @@
 // as a secret used by supabase/functions/ai.
 
 export const CONFIG = {
-  SUPABASE_URL: "",
-  SUPABASE_ANON_KEY: "",
+  SUPABASE_URL: "https://uypgtlsltstndlhknqoh.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_GrWE4Sc4Mh21IjgSDUao-g_VR1mmT37",
 
   // Show a "Continue with Google" button (enable the Google provider in Supabase first).
   GOOGLE_SIGN_IN: false,
