@@ -102,8 +102,8 @@ function renderLanding() {
   view.innerHTML = `
     <section class="hero">
       <div>
-        <div class="label">Open-source · Free · Built by students</div>
-        <h1>Practise IB Physics with a questionbank everyone can use.</h1>
+        <div class="label">Open-source · Free · Built by students and teachers</div>
+        <h1>Tired of expensive and useless IB revision platforms?</h1>
         <p class="lead">Generate practice papers with markschemes, work through questions with instant checking${AI_ENABLED ? " and an AI tutor that guides you step by step" : ""}, and revise each topic with visual lessons.</p>
         <div class="btn-row">
           <a class="btn btn-cta" href="#/signup">Get started free</a>
