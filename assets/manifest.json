@@ -1,0 +1,18 @@
+{
+  "css": "assets/css/style.css?v=218aab4761",
+  "entry": "assets/js/app.js?v=f14d5dc484",
+  "imports": {
+    "./assets/js/ai.js": "./assets/js/ai.js?v=5b380a5aaf",
+    "./assets/js/app.js": "./assets/js/app.js?v=f14d5dc484",
+    "./assets/js/auth.js": "./assets/js/auth.js?v=6218030b44",
+    "./assets/js/config.js": "./assets/js/config.js?v=b2e10b4289",
+    "./assets/js/data.js": "./assets/js/data.js?v=de3f4d457b",
+    "./assets/js/generator.js": "./assets/js/generator.js?v=8b7ae4a804",
+    "./assets/js/help.js": "./assets/js/help.js?v=2a76944f7a",
+    "./assets/js/pdf.js": "./assets/js/pdf.js?v=c2d720726e",
+    "./assets/js/picker.js": "./assets/js/picker.js?v=9098e54fdf",
+    "./assets/js/revision.js": "./assets/js/revision.js?v=70ea1b0f76",
+    "./assets/js/study.js": "./assets/js/study.js?v=7e4312c1e8",
+    "./assets/js/util.js": "./assets/js/util.js?v=80cd926b77"
+  }
+}
