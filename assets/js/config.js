@@ -13,6 +13,11 @@ export const CONFIG = {
   SUPABASE_URL: "https://uypgtlsltstndlhknqoh.supabase.co",
   SUPABASE_ANON_KEY: "sb_publishable_GrWE4Sc4Mh21IjgSDUao-g_VR1mmT37",
 
+  // AI tutor and AI marking of written answers. Needs an Anthropic API key stored in
+  // Supabase (run tools/set_ai_key.sh), which is paid per use. While false, the site is
+  // completely free to run: written answers are self-marked against the markscheme.
+  AI_ENABLED: false,
+
   // Show a "Continue with Google" button (enable the Google provider in Supabase first).
   GOOGLE_SIGN_IN: false,
 

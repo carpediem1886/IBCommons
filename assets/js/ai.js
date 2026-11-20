@@ -3,7 +3,7 @@
 import { CONFIG, DEMO_MODE } from "./config.js";
 import { getAccessToken } from "./auth.js";
 
-export const AI_ENABLED = !DEMO_MODE;
+export const AI_ENABLED = !DEMO_MODE && CONFIG.AI_ENABLED;
 
 export async function callAI(body) {
   if (!AI_ENABLED) throw new Error("AI features are off in demo mode.");

@@ -18,7 +18,7 @@ export async function renderStudy({ program, subject, syllabus, view, user }) {
         <label class="field"><span>Paper type</span><div class="seg" id="s-paper"></div></label>
         <div class="field"><span style="font-weight:600;font-size:.88rem;display:block;margin-bottom:6px">Topic or sub-topic</span><div id="s-topics"></div></div>
         <button class="btn btn-primary" id="s-go" style="width:100%">Show questions</button>
-        ${AI_ENABLED ? "" : `<p class="small muted" style="margin-top:12px">Demo mode: multiple-choice and numerical answers are checked automatically; for written answers you compare with the markscheme yourself.</p>`}
+        ${AI_ENABLED ? "" : `<p class="small muted" style="margin-top:12px">Multiple-choice and numerical answers are checked automatically. For written answers, compare yours with the markscheme and mark it yourself.</p>`}
       </aside>
       <section id="s-out">${emptyState("Pick what to study", "Choose a topic or sub-topic and a paper type, then press <b>Show questions</b>.")}</section>
     </div>`;
@@ -67,7 +67,7 @@ function questionCard(q, n, record, syllabus) {
         return `<label data-letter="${L}"><input type="radio" name="mcq-${esc(q.id)}" value="${L}"><span class="letter">${L}</span><span>${md(o).replace(/^<p>|<\/p>$/g, "")}</span></label>`;
       }).join("")}</div>
       <div class="answer-actions"><button class="btn btn-primary btn-sm" data-act="check-mcq">Check answer</button>
-      <button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button></div>
+      ${AI_ENABLED ? `<button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button>` : ""}</div>
       <div class="feedback" data-fb="mcq"></div>`
     : q.parts.map((p, k) => `
       <div class="q-part" data-part="${k}">
@@ -81,7 +81,7 @@ function questionCard(q, n, record, syllabus) {
           </div>
           <div class="feedback" data-fb="${k}"></div>
         </div>
-      </div>`).join("") + `<div class="answer-actions" style="margin-top:16px"><button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button></div>`;
+      </div>`).join("") + (AI_ENABLED ? `<div class="answer-actions" style="margin-top:16px"><button class="btn btn-ghost btn-sm" data-act="tutor">Ask the AI tutor</button></div>` : "");
   return `<article class="card q-card" id="q-${esc(q.id)}">
     <div class="q-meta"><span class="chip">Q${n}</span><span class="chip">${esc(q.subtopics.join(", "))}</span><span class="chip">${esc(paperName(syllabus, q.paper))}</span>${q.level === "HL" ? '<span class="hl-tag">HL</span>' : ""}${status}<span class="marks">${q.marks} mark${q.marks === 1 ? "" : "s"}</span></div>
     <div class="q-text">${md(q.stem)}${q.image ? `<img src="${esc(q.image)}" alt="Diagram">` : ""}</div>
@@ -112,7 +112,7 @@ function wireQuestion(q, user, onProgress) {
       });
       fb.innerHTML = ok
         ? `<div class="notice ok"><b>Correct.</b></div>${q.markscheme?.length ? msBlock(q.markscheme) : ""}`
-        : `<div class="notice bad"><b>Not quite.</b> Have another go, or ask the tutor for a hint.</div>`;
+        : `<div class="notice bad"><b>Not quite.</b> Have another go${AI_ENABLED ? ", or ask the tutor for a hint" : ""}.</div>`;
       renderMath(fb);
       record(ok);
     }
@@ -137,7 +137,7 @@ function wireQuestion(q, user, onProgress) {
         const ok = got !== null && Math.abs(got - p.answer.value) <= Math.abs(p.answer.value) * tol + 1e-12;
         fb.innerHTML = ok
           ? `<div class="notice ok"><b>Correct.</b> ${p.answer.unit ? "Check you gave the unit too." : ""}</div>${msBlock(p.markscheme)}`
-          : `<div class="notice bad"><b>${got === null ? "I couldn't find a number in your answer." : "That value doesn't match the markscheme."}</b> Try again, show the markscheme, or ask the tutor to guide you.</div>`;
+          : `<div class="notice bad"><b>${got === null ? "I couldn't find a number in your answer." : "That value doesn't match the markscheme."}</b> Try again${AI_ENABLED ? ", show the markscheme, or ask the tutor to guide you" : " or show the markscheme"}.</div>`;
         renderMath(fb);
         record(ok);
         return;
@@ -208,7 +208,7 @@ function openTutor(card, q) {
   const slot = card.querySelector("[data-tutor]");
   if (slot.firstChild) { slot.innerHTML = ""; return; }
   if (!AI_ENABLED) {
-    slot.innerHTML = `<div class="notice warn">The AI tutor is switched off in demo mode. Once the site is connected to Supabase, it will guide you through each question step by step.</div>`;
+    slot.innerHTML = `<div class="notice warn">The AI tutor is switched off on this site.</div>`;
     return;
   }
   slot.innerHTML = `

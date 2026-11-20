@@ -6,6 +6,7 @@ import { $, esc, emptyState } from "./util.js";
 import { renderGenerator } from "./generator.js";
 import { renderStudy } from "./study.js";
 import { renderRevisionList, renderLesson } from "./revision.js";
+import { AI_ENABLED } from "./ai.js";
 
 const view = $("#view");
 const PROGRAMS = {
@@ -20,7 +21,9 @@ const TOOLS = [
   },
   {
     id: "study", name: "Open Study",
-    blurb: "Work through every question on a topic, check your answers against the markscheme, and ask the AI tutor for hints.",
+    blurb: AI_ENABLED
+      ? "Work through every question on a topic, check your answers against the markscheme, and ask the AI tutor for hints."
+      : "Work through every question on a topic and check your answers against the markscheme as you go.",
     icon: '<svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>',
   },
   {
@@ -101,7 +104,7 @@ function renderLanding() {
       <div>
         <div class="label">Open-source · Free · Built by students</div>
         <h1>Practise IB Physics with a questionbank everyone can use.</h1>
-        <p class="lead">Generate practice papers with markschemes, work through questions with instant checking and an AI tutor that guides you step by step, and revise each topic with visual lessons.</p>
+        <p class="lead">Generate practice papers with markschemes, work through questions with instant checking${AI_ENABLED ? " and an AI tutor that guides you step by step" : ""}, and revise each topic with visual lessons.</p>
         <div class="btn-row">
           <a class="btn btn-cta" href="#/signup">Get started free</a>
           <a class="btn btn-ghost" href="#/login">I have an account</a>

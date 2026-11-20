@@ -63,10 +63,16 @@ python3 tools/build_index.py
    ```bash
    supabase login
    supabase link --project-ref <your-project-ref>
-   supabase secrets set ANTHROPIC_API_KEY=<your key from console.anthropic.com>
-   supabase secrets set AI_DAILY_LIMIT=60
    supabase functions deploy ai
    ```
+
+## Turning on the AI tutor (optional, paid)
+
+The AI tutor and AI marking are **off by default**, so the site costs nothing to run. To turn them on:
+
+1. Create an API key at console.anthropic.com and add prepaid credit. Leave auto-reload off.
+2. Run `./tools/set_ai_key.sh`. It asks for the key with hidden input and stores it as a Supabase secret.
+3. Set `AI_ENABLED: true` in `assets/js/config.js` and publish.
 
 **Cost:** the AI uses `claude-opus-5-5` (set in `supabase/functions/ai/index.ts`). Each tutor reply or marked answer costs roughly one to two US cents. `AI_DAILY_LIMIT` caps how many requests each student can make per day. Set a monthly spend limit in the Anthropic Console as well.
 
