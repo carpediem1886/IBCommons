@@ -2,5 +2,14 @@
   { "id": "physics", "name": "Physics", "group": "Sciences", "programs": ["dp", "myp"], "status": "live" },
   { "id": "chemistry", "name": "Chemistry", "group": "Sciences", "programs": ["dp", "myp"], "status": "soon" },
   { "id": "biology", "name": "Biology", "group": "Sciences", "programs": ["dp", "myp"], "status": "soon" },
-  { "id": "math-aa", "name": "Mathematics: Analysis and Approaches", "group": "Mathematics", "programs": ["dp"], "status": "soon" }
+  { "id": "ess", "name": "Environmental Systems and Societies (ESS)", "group": "Sciences", "programs": ["dp"], "status": "soon" },
+  { "id": "design-tech", "name": "Design & Technology", "group": "Sciences", "programs": ["dp", "myp"], "status": "soon", "note": "MYP Design / DP Design Technology" },
+
+  { "id": "math-aa", "name": "Analysis and Approaches", "group": "Mathematics", "programs": ["dp"], "status": "soon" },
+  { "id": "math-ai", "name": "Applications and Interpretation", "group": "Mathematics", "programs": ["dp"], "status": "soon" },
+  { "id": "myp-math", "name": "MYP Mathematics", "group": "Mathematics", "programs": ["myp"], "status": "soon", "note": "Standard and Extended" },
+
+  { "id": "history", "name": "History", "group": "Individuals & Societies", "programs": ["dp", "myp"], "status": "soon" },
+  { "id": "economics", "name": "Economics", "group": "Individuals & Societies", "programs": ["dp"], "status": "soon" },
+  { "id": "geography", "name": "Geography", "group": "Individuals & Societies", "programs": ["dp", "myp"], "status": "soon" }
 ]

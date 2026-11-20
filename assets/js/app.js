@@ -98,7 +98,32 @@ function renderNav(user, parts) {
 }
 
 // ---------- Pages ----------
-function renderLanding() {
+// A subject card: live subjects link onwards; the rest are shown "under construction".
+function subjectCard(s, href) {
+  const chips = ["dp", "myp"].filter((p) => s.programs.includes(p))
+    .map((p) => `<span class="chip teal">${PROGRAMS[p].short}</span>`).join("");
+  const inner = `
+    <div class="subject-chips">${chips}</div>
+    <h3>${esc(s.name)}</h3>
+    ${s.note ? `<p class="small muted">${esc(s.note)}</p>` : ""}
+    ${s.status === "live"
+      ? `<p class="small subject-live">Available now →</p>`
+      : `<div class="construction" aria-label="Coming soon"><span>Coming soon</span></div>`}`;
+  return s.status === "live"
+    ? `<a class="card subject-card live" href="${href}">${inner}</a>`
+    : `<div class="card subject-card soon">${inner}</div>`;
+}
+
+function subjectGroups(subjects, hrefFor) {
+  const groups = [...new Set(subjects.map((s) => s.group))];
+  return groups.map((g) => `
+    <div class="subject-group">
+      <h3 class="subject-group-title">${esc(g)}</h3>
+      <div class="subject-grid">${subjects.filter((s) => s.group === g).map((s) => subjectCard(s, hrefFor(s))).join("")}</div>
+    </div>`).join("");
+}
+
+async function renderLanding() {
   view.innerHTML = `
     <section class="hero">
       <div>
@@ -121,7 +146,15 @@ function renderLanding() {
           <h3>${t.name}</h3>
           <p class="muted">${t.blurb}</p>
         </div>`).join("")}
-    </section>`;
+    </section>
+    <section class="subjects-section" id="subjects"></section>`;
+  const subjects = await loadSubjects();
+  const box = $("#subjects");
+  if (!box || !subjects.length) return;
+  box.innerHTML = `
+    <div class="label">Subjects</div>
+    <h2>Starting with Physics. More on the way.</h2>
+    ${subjectGroups(subjects, () => "#/signup")}`;
 }
 
 function renderAuth(mode) {
@@ -203,11 +236,7 @@ async function renderSubjects(program) {
   }
   view.innerHTML = `
     <div class="page-head"><div><div class="label">${program.name}</div><h1>Choose a subject</h1></div></div>
-    <div class="grid grid-3">
-      ${list.map((s) => s.status === "live"
-        ? `<a class="card feature-card" href="#/${program.id}/${s.id}"><div class="label">${esc(s.group)}</div><h3>${esc(s.name)}</h3><p class="muted small">Questionbank, paper generator and revision.</p></a>`
-        : `<div class="card" style="opacity:.6"><div class="label">${esc(s.group)}</div><h3>${esc(s.name)}</h3><p class="small muted">Coming soon</p></div>`).join("")}
-    </div>`;
+    ${subjectGroups(list, (s) => `#/${program.id}/${s.id}`)}`;
 }
 
 function renderSubjectHome({ program, subject, syllabus }) {
