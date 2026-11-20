@@ -1,9 +1,9 @@
 {
-  "css": "assets/css/style.css?v=218aab4761",
-  "entry": "assets/js/app.js?v=f14d5dc484",
+  "css": "assets/css/style.css?v=eb38580f24",
+  "entry": "assets/js/app.js?v=e881bcf416",
   "imports": {
     "./assets/js/ai.js": "./assets/js/ai.js?v=5b380a5aaf",
-    "./assets/js/app.js": "./assets/js/app.js?v=f14d5dc484",
+    "./assets/js/app.js": "./assets/js/app.js?v=e881bcf416",
     "./assets/js/auth.js": "./assets/js/auth.js?v=6218030b44",
     "./assets/js/config.js": "./assets/js/config.js?v=b2e10b4289",
     "./assets/js/data.js": "./assets/js/data.js?v=de3f4d457b",

@@ -114,6 +114,7 @@ const HERO_SKETCH = `
       <path d="M 128 118 Q 116 112 105 98" marker-end="url(#sk-arrow)"/>
       <path d="M 116 54 Q 92 64 64 52" marker-end="url(#sk-arrow)"/>
     </g>
+    <text class="sk-num" x="86" y="92">7</text>
     <text class="sk-word" x="130" y="128">finish</text>
     <text class="sk-you" x="119" y="60">you!</text>
   </svg>`;
