@@ -45,11 +45,13 @@ You need Python 3, which is already on macOS.
 python3 -m http.server 8080
 ```
 
-Then open <http://localhost:8080>. After adding or changing content, run:
+Then open <http://localhost:8080>. Before publishing any change (content, scripts or styles), run:
 
 ```bash
 python3 tools/build_index.py
 ```
+
+It checks the content, rebuilds the `index.json` files, and adds a fingerprint (`?v=…`) to every script and the stylesheet in `index.html`, so visitors' browsers load the new version straight away instead of an old cached copy.
 
 ## Connect Supabase (accounts + AI)
 
