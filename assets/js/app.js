@@ -104,7 +104,8 @@ function renderLanding() {
       <div>
         <div class="label">Open-source · Free · Built by students and teachers</div>
         <h1>Tired of expensive and useless IB revision platforms?</h1>
-        <p class="lead">Generate practice papers with markschemes, work through questions with instant checking${AI_ENABLED ? " and an AI tutor that guides you step by step" : ""}, and revise each topic with visual lessons.</p>
+        <p class="lead">Made by IB teachers and students, for students to generate practice papers with markschemes, work through questions with instant checking, and revise each topic with visual lessons.</p>
+        <p class="hero-note">This is not affiliated with the International Baccalaureate Organization (IBO), and is built on our own teacher-generated materials.</p>
         <div class="btn-row">
           <a class="btn btn-cta" href="#/signup">Get started free</a>
           <a class="btn btn-ghost" href="#/login">I have an account</a>

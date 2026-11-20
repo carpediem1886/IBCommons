@@ -165,6 +165,10 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 3px sol
 .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; padding: 24px 0 48px; }
 .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 52ch; }
 .hero-art { display: grid; place-items: center; }
+.hero-note {
+  font-size: .9rem; color: var(--navy); max-width: 52ch;
+  border-left: 3px solid var(--teal); padding: 4px 0 4px 12px; margin: 0 0 1.4em;
+}
 .tiles { display: grid; grid-template-columns: repeat(3, 84px); gap: 18px; }
 .tiles span { width: 84px; height: 84px; border-radius: 21px; background: var(--navy); }
 .tiles span.t { background: var(--teal); }
