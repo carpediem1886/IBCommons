@@ -167,9 +167,7 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 3px sol
 .hero-art { display: grid; place-items: center; }
 .hero-sketch { width: 100%; max-width: 440px; height: auto; overflow: visible; }
 .hero-sketch text { font-family: "Caveat", "Comic Sans MS", cursive; text-anchor: middle; }
-.sk-num text { font-size: 19px; font-weight: 700; fill: var(--cream); }
 .sk-lines path { fill: none; stroke: var(--slate); stroke-width: 1.6; stroke-linecap: round; }
-.sk-plus text { font-size: 15px; font-weight: 600; fill: var(--teal); }
 .sk-word { font-size: 19px; font-weight: 700; fill: var(--navy); text-anchor: start !important; }
 .sk-you { font-size: 22px; font-weight: 700; fill: var(--orange); text-anchor: start !important; }
 .hero-note {

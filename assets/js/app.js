@@ -100,19 +100,9 @@ function renderNav(user, parts) {
 // ---------- Pages ----------
 // Homepage illustration: the official mark, untouched, with hand-drawn notes around it.
 // Coordinates match the mark's own SVG (tiles 28 wide at 0 / 36 / 72; the dot at 50,50).
-const HERO_SKETCH = (() => {
-  const centres = [[86, 14], [50, 14], [14, 14], [14, 50], [14, 86], [50, 86], [86, 86]]; // the C, in order
-  const hops = [ // curved arrow from tile n to n+1, with where its "+1" goes
-    ["M 82 -5 Q 68 -21 55 -6", 68, -25],
-    ["M 46 -5 Q 32 -21 19 -6", 32, -25],
-    ["M -5 18 Q -21 32 -6 45", -27, 36],
-    ["M -5 54 Q -21 68 -6 81", -27, 72],
-    ["M 18 105 Q 32 121 45 106", 32, 132],
-    ["M 54 105 Q 68 121 81 106", 68, 132],
-  ];
-  return `
-  <svg class="hero-sketch" viewBox="-62 -58 250 222" role="img"
-       aria-label="The IBCommons mark: you are the orange dot, moving from start through tiles 1 to 7 to finish">
+const HERO_SKETCH = `
+  <svg class="hero-sketch" viewBox="-14 -20 200 166" role="img"
+       aria-label="The IBCommons mark: you are the orange dot, and the last tile is the finish">
     <defs>
       <filter id="sk"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter>
       <marker id="sk-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -120,19 +110,13 @@ const HERO_SKETCH = (() => {
       </marker>
     </defs>
     <image href="assets/brand/IBCommons-mark-color.svg" x="-12" y="-12" width="124" height="124"/>
-    <g class="sk-num">${centres.map(([x, y], i) => `<text x="${x}" y="${y + 6}">${i + 1}</text>`).join("")}</g>
     <g class="sk-lines" filter="url(#sk)">
-      ${hops.map(([d]) => `<path d="${d}" marker-end="url(#sk-arrow)"/>`).join("")}
-      <path d="M 128 -22 Q 116 -18 105 2" marker-end="url(#sk-arrow)"/>
       <path d="M 128 118 Q 116 112 105 98" marker-end="url(#sk-arrow)"/>
       <path d="M 116 54 Q 92 64 64 52" marker-end="url(#sk-arrow)"/>
     </g>
-    <g class="sk-plus">${hops.map(([, x, y]) => `<text x="${x}" y="${y}">+1</text>`).join("")}</g>
-    <text class="sk-word" x="130" y="-20">start</text>
     <text class="sk-word" x="130" y="128">finish</text>
     <text class="sk-you" x="119" y="60">you!</text>
   </svg>`;
-})();
 
 // A subject card: live subjects link onwards; the rest are shown "under construction".
 function subjectCard(s, href) {
